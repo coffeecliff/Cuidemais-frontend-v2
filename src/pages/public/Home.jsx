@@ -148,7 +148,15 @@ export function Home() {
             transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
             className="mx-auto w-full max-w-lg md:max-w-none"
           >
-            <img src="/hero.svg" alt="Ilustração de agendamento e cuidado do Cuide+" className="h-auto w-full" />
+            <img
+              src="/hero.svg"
+              alt="Ilustração de agendamento e cuidado do Cuide+"
+              className="h-auto w-full scale-[1.4]"
+              style={{
+                maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
+              }}
+            />
           </motion.div>
         </div>
       </section>
