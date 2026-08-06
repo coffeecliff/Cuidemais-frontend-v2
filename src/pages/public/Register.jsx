@@ -57,7 +57,7 @@ export function Register() {
           className="w-full"
         >
           <div className="mb-8 flex flex-col items-center text-center">
-            <img src="/logo.svg" alt="Cuide+" className="mb-4 h-12 w-42" />
+            <img src="/logo.svg" alt="Cuide+" className="h-12 w-42" />
             <h1 className="text-2xl font-bold text-dark">Crie sua conta</h1>
             <p className="mt-1 text-sm text-medium">Junte-se à comunidade de cuidado do Cuide+</p>
           </div>
