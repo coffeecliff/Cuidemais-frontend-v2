@@ -74,8 +74,10 @@ export function Pacientes() {
                   key={p.id}
                   type="button"
                   onClick={() => setSelectedId(p.id)}
-                  className={`flex items-center gap-3 rounded-2xl border px-4 py-3 text-left transition-colors ${
-                    selectedId === p.id ? 'border-light bg-white' : 'border-dark/5 bg-white hover:border-light/50'
+                  className={`flex items-center gap-3 rounded-2xl border border-l-4 bg-white px-4 py-3 text-left transition-colors ${
+                    selectedId === p.id
+                      ? 'border-light border-l-accent'
+                      : 'border-dark/5 border-l-transparent hover:border-light/50 hover:bg-accent/5'
                   }`}
                 >
                   <img src={p.user?.avatar} alt={p.user?.name} className="h-10 w-10 rounded-full object-cover" />

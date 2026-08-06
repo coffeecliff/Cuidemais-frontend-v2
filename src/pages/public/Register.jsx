@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Plus, UserPlus } from 'lucide-react';
+import { UserPlus } from 'lucide-react';
 import { PublicNavbar } from '../../components/layout/PublicNavbar';
 import { Card } from '../../components/ui/Card';
 import { Input } from '../../components/ui/Input';
@@ -57,9 +57,7 @@ export function Register() {
           className="w-full"
         >
           <div className="mb-8 flex flex-col items-center text-center">
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-light text-white">
-              <Plus size={24} strokeWidth={3} />
-            </div>
+            <img src="/logo.svg" alt="Cuide+" className="mb-4 h-12 w-12" />
             <h1 className="text-2xl font-bold text-dark">Crie sua conta</h1>
             <p className="mt-1 text-sm text-medium">Junte-se à comunidade de cuidado do Cuide+</p>
           </div>

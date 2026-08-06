@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Plus } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '../ui/Button';
 
 const LINKS = [
@@ -16,13 +16,8 @@ export function PublicNavbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-dark/5 bg-white">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-light text-white">
-            <Plus size={18} strokeWidth={3} />
-          </div>
-          <span className="text-lg font-bold text-dark">
-            Cuide<span className="text-light">+</span>
-          </span>
+        <Link to="/" className="flex items-center">
+          <img src="/logo-text.svg" alt="Cuide+" className="h-8 w-auto" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

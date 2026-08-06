@@ -10,7 +10,6 @@ import {
   LogOut,
   Menu,
   X,
-  Plus,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
@@ -37,8 +36,10 @@ function NavItems({ items, onNavigate }) {
           end={end}
           onClick={onNavigate}
           className={({ isActive }) =>
-            `flex items-center gap-3 rounded-xl px-4 py-2.5 text-sm font-medium transition-colors ${
-              isActive ? 'bg-light text-white' : 'text-medium hover:bg-dark/5 hover:text-dark'
+            `flex items-center gap-3 rounded-xl border-l-2 px-4 py-2.5 text-sm font-medium transition-colors cursor-pointer ${
+              isActive
+                ? 'border-accent bg-light text-white'
+                : 'border-transparent text-medium hover:border-light/40 hover:bg-accent/10 hover:text-dark'
             }`
           }
         >
@@ -52,13 +53,8 @@ function NavItems({ items, onNavigate }) {
 
 function Brand() {
   return (
-    <div className="flex items-center gap-2 px-2">
-      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-light text-white">
-        <Plus size={18} strokeWidth={3} />
-      </div>
-      <span className="text-lg font-bold text-dark">
-        Cuide<span className="text-light">+</span>
-      </span>
+    <div className="flex items-center px-2">
+      <img src="/logo-text.svg" alt="Cuide+" className="h-8 w-auto" />
     </div>
   );
 }

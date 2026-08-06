@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const VARIANTS = {
   primary: 'bg-light text-white hover:bg-medium border border-transparent',
   secondary: 'bg-transparent text-medium border border-light hover:bg-light/10',
-  ghost: 'bg-transparent text-medium border border-transparent hover:bg-dark/5',
+  ghost: 'bg-transparent text-medium border border-transparent hover:bg-accent/10 hover:text-dark',
   danger: 'bg-transparent text-red-600 border border-red-200 hover:bg-red-50',
 };
 

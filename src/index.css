@@ -32,4 +32,46 @@
   #root {
     min-height: 100svh;
   }
+
+  ::selection {
+    background: var(--color-accent);
+    color: #fff;
+  }
+
+  button:not(:disabled),
+  a,
+  [role='button'],
+  [role='link'],
+  label[for],
+  select,
+  summary,
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--color-light) 55%, transparent);
+    border-radius: 9999px;
+    border: 3px solid var(--color-background);
+    background-clip: padding-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-medium);
+    background-clip: padding-box;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-light) transparent;
+  }
 }

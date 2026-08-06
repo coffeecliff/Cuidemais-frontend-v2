@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import {
-  Plus,
   CalendarCheck,
   UserPlus,
   HeartHandshake,
@@ -72,14 +71,14 @@ export function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-light/25">
         <div className="mx-auto max-w-4xl px-6 pb-28 pt-24 text-center">
-          <motion.div
+          <motion.img
+            src="/logo.svg"
+            alt="Cuide+"
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-light text-white"
-          >
-            <Plus size={34} strokeWidth={3} />
-          </motion.div>
+            className="mx-auto mb-6 h-16 w-16"
+          />
 
           <motion.h1
             initial={{ opacity: 0, y: 12 }}
@@ -240,14 +239,7 @@ export function Home() {
 
       <footer className="bg-white py-10">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-6 text-center">
-          <div className="flex items-center gap-2">
-            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-light text-white">
-              <Plus size={16} strokeWidth={3} />
-            </div>
-            <span className="text-sm font-bold text-dark">
-              Cuide<span className="text-light">+</span>
-            </span>
-          </div>
+          <img src="/logo-text.svg" alt="Cuide+" className="h-6 w-auto" />
           <p className="flex items-center gap-1.5 text-xs text-medium">
             <Clock size={13} />
             Plataforma de agendamento psicológico voluntário
