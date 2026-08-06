@@ -244,7 +244,7 @@ export function Home() {
               <img
                 src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
                 alt="Psicóloga voluntária atendendo uma paciente"
-                className="h-64 w-full object-cover"
+                className="h-80 w-full object-cover object-[center_34%]"
               />
               <div className="p-6">
                 <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-light/15 text-light">
