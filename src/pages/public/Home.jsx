@@ -9,6 +9,10 @@ import {
   ShieldCheck,
   Clock,
   Sparkles,
+  Heart,
+  Lock,
+  Users,
+  ArrowRight,
 } from 'lucide-react';
 import { PublicNavbar } from '../../components/layout/PublicNavbar';
 import { Button } from '../../components/ui/Button';
@@ -50,6 +54,12 @@ const AUDIENCES = [
   },
 ];
 
+const TRUST_ITEMS = [
+  { icon: ShieldCheck, label: 'Seguro e confiável' },
+  { icon: Lock, label: 'Privacidade garantida' },
+  { icon: Users, label: 'Feito para ajudar' },
+];
+
 const STATS = [
   { value: '500+', label: 'Atendimentos realizados' },
   { value: '40+', label: 'Psicólogos voluntários' },
@@ -69,49 +79,85 @@ export function Home() {
       <PublicNavbar />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-light/25">
-        <div className="mx-auto max-w-4xl px-6 pb-28 pt-24 text-center">
-          <motion.img
-            src="/logo.svg"
-            alt="Cuide+"
-            initial={{ opacity: 0, scale: 0.85 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="mx-auto mb-6 h-16 w-16"
-          />
+      <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-light/15">
+        <div className="mx-auto grid max-w-6xl gap-12 px-6 pb-20 pt-16 md:grid-cols-2 md:items-center md:pb-28 md:pt-24">
+          <div className="text-center md:text-left">
+            <motion.span
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 rounded-full border border-dark/10 bg-white px-4 py-1.5 text-xs font-semibold text-medium"
+            >
+              <Heart size={14} className="text-light" fill="currentColor" />
+              Plataforma de cuidado e acolhimento
+            </motion.span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl font-extrabold tracking-tight text-dark sm:text-6xl"
-          >
-            Cuide<span className="text-light">+</span>
-          </motion.h1>
+            <motion.img
+              src="/logo.svg"
+              alt=""
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
+              className="mx-auto mt-6 h-14 w-14 md:mx-0"
+            />
 
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-medium"
-          >
-            Plataforma digital voltada para facilitar o agendamento e a gestão de atendimentos
-            psicológicos voluntários. Criada especialmente para universidades, ONGs e iniciativas
-            sociais dedicadas à promoção da saúde mental.
-          </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="mt-2 text-5xl font-extrabold tracking-tight text-dark sm:text-6xl"
+            >
+              Cuide<span className="text-light">+</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-medium md:mx-0"
+            >
+              Plataforma digital voltada para facilitar o agendamento e a gestão de atendimentos
+              psicológicos voluntários. Criada especialmente para universidades, ONGs e iniciativas
+              sociais dedicadas à promoção da saúde mental.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mt-10 flex flex-wrap items-center justify-center gap-4 md:justify-start"
+            >
+              <Button to="/register" size="lg">
+                Começar Agora
+                <ArrowRight size={16} />
+              </Button>
+              <Button href="#sobre" variant="secondary" size="lg">
+                Sobre nós
+              </Button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 md:justify-start"
+            >
+              {TRUST_ITEMS.map((item) => (
+                <span key={item.label} className="flex items-center gap-1.5 text-xs font-medium text-medium">
+                  <item.icon size={14} className="text-light" />
+                  {item.label}
+                </span>
+              ))}
+            </motion.div>
+          </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-10 flex flex-wrap items-center justify-center gap-4"
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
+            className="mx-auto w-full max-w-lg md:max-w-none"
           >
-            <Button to="/register" size="lg">
-              Começar Agora
-            </Button>
-            <Button href="#sobre" variant="secondary" size="lg">
-              Sobre nós
-            </Button>
+            <img src="/hero.svg" alt="Ilustração de agendamento e cuidado do Cuide+" className="h-auto w-full" />
           </motion.div>
         </div>
       </section>
