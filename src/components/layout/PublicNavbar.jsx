@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from '../ui/Button';
@@ -12,13 +12,24 @@ const LINKS = [
 export function PublicNavbar() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const goHome = (e) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
+    setOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-dark/5 bg-white">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link to="/" className="flex items-center">
+        <a href="/" onClick={goHome} className="flex items-center">
           <img src="/logo-text.svg" alt="Cuide+" className="h-8 w-auto" />
-        </Link>
+        </a>
 
         <nav className="hidden items-center gap-8 md:flex">
           {LINKS.map((link) => {
@@ -27,6 +38,7 @@ export function PublicNavbar() {
               <a
                 key={link.to}
                 href={link.to}
+                onClick={link.to === '/' ? goHome : undefined}
                 className={`text-sm font-semibold transition-colors ${
                   isActive ? 'text-light' : 'text-dark hover:text-light'
                 }`}
@@ -85,7 +97,7 @@ export function PublicNavbar() {
                   <a
                     key={link.to}
                     href={link.to}
-                    onClick={() => setOpen(false)}
+                    onClick={link.to === '/' ? goHome : () => setOpen(false)}
                     className="text-base font-semibold text-dark hover:text-light"
                   >
                     {link.label}
