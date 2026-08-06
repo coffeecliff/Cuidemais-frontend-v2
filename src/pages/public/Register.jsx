@@ -49,7 +49,7 @@ export function Register() {
     <div className="min-h-screen bg-background">
       <PublicNavbar />
 
-      <div className="mx-auto flex max-w-md flex-col items-center px-6 py-20">
+      <div className="mx-auto flex max-w-md flex-col items-center px-6 py-7">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ export function Register() {
           className="w-full"
         >
           <div className="mb-8 flex flex-col items-center text-center">
-            <img src="/logo.svg" alt="Cuide+" className="mb-4 h-12 w-12" />
+            <img src="/logo.svg" alt="Cuide+" className="mb-4 h-12 w-42" />
             <h1 className="text-2xl font-bold text-dark">Crie sua conta</h1>
             <p className="mt-1 text-sm text-medium">Junte-se à comunidade de cuidado do Cuide+</p>
           </div>

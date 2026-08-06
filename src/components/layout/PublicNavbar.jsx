@@ -26,12 +26,12 @@ export function PublicNavbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-dark/5 bg-white">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <a href="/" onClick={goHome} className="flex items-center">
-          <img src="/logo-text.svg" alt="Cuide+" className="h-8 w-auto" />
+      <div className="mx-auto grid h-20 max-w-6xl grid-cols-[1fr_auto_1fr] items-center px-6 md:grid-cols-3">
+        <a href="/" onClick={goHome} className="flex items-center justify-self-start">
+          <img src="/logo-text.svg" alt="Cuide+" className="h-14 w-auto" />
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="col-start-2 hidden items-center justify-self-center gap-8 md:flex">
           {LINKS.map((link) => {
             const isActive = link.to === '/' && location.pathname === '/' && !location.hash;
             return (
@@ -39,7 +39,7 @@ export function PublicNavbar() {
                 key={link.to}
                 href={link.to}
                 onClick={link.to === '/' ? goHome : undefined}
-                className={`text-sm font-semibold transition-colors ${
+                className={`text-sm font-bold transition-colors ${
                   isActive ? 'text-light' : 'text-dark hover:text-light'
                 }`}
               >
@@ -49,7 +49,7 @@ export function PublicNavbar() {
           })}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden justify-self-end md:block">
           <Button to="/login" variant="secondary" size="sm">
             Entrar
           </Button>
@@ -59,7 +59,7 @@ export function PublicNavbar() {
           type="button"
           onClick={() => setOpen(true)}
           aria-label="Abrir menu"
-          className="flex h-9 w-9 items-center justify-center rounded-lg text-dark hover:bg-dark/5 md:hidden"
+          className="flex h-9 w-9 items-center justify-center justify-self-end rounded-lg text-dark hover:bg-dark/5 md:hidden"
         >
           <Menu size={22} />
         </button>

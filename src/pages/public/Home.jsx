@@ -79,7 +79,7 @@ export function Home() {
       <PublicNavbar />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-light/15">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white to-[#efe8f2]">
         <div className="mx-auto grid max-w-360 gap-12 px-[0.8px] pb-20 pt-16 md:grid-cols-2 md:items-center md:pb-28 md:pt-24">
           <div className="text-center md:text-left">
             <motion.span
@@ -105,7 +105,7 @@ export function Home() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-medium md:mx-0"
+              className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-medium md:mx-0 font-medium "
             >
               Plataforma digital voltada para facilitar o agendamento e a gestão de atendimentos
               psicológicos voluntários. Criada especialmente para universidades, ONGs e iniciativas
@@ -183,6 +183,8 @@ export function Home() {
         </div>
       </section>
 
+          
+
       {/* Para quem é */}
       <section className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-[0.8px]">
@@ -215,7 +217,7 @@ export function Home() {
             <h2 className="mt-2 text-3xl font-bold text-dark">
               Conectando quem precisa de cuidado a quem quer cuidar
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-medium">
+            <p className="mt-4 text-base leading-relaxed text-medium font-medium">
               O Cuide+ nasceu para reduzir a distância entre pessoas que precisam de apoio
               psicológico e profissionais dispostos a oferecer atendimento voluntário. Facilitamos
               o agendamento, a organização de prontuários simples e o acompanhamento de cada
@@ -248,7 +250,7 @@ export function Home() {
                 <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-light/15 text-light">
                   <ShieldCheck size={18} />
                 </div>
-                <p className="text-sm leading-relaxed text-medium">
+                <p className="text-sm leading-relaxed text-medium font-medium">
                   "O Cuide+ organizou completamente a agenda do nosso projeto de extensão. Hoje
                   conseguimos atender o dobro de estudantes com a mesma equipe voluntária."
                 </p>
@@ -267,7 +269,7 @@ export function Home() {
             <Sparkles size={22} />
           </div>
           <h2 className="text-3xl font-bold text-white">Pronto para começar a cuidar?</h2>
-          <p className="mt-4 text-base leading-relaxed text-white/70">
+          <p className="mt-4 text-base leading-relaxed text-white/70 font-medium">
             Crie sua conta gratuitamente e comece a agendar ou oferecer atendimentos psicológicos
             hoje mesmo.
           </p>
@@ -275,7 +277,7 @@ export function Home() {
             <Button to="/register" size="lg">
               Criar conta gratuita
             </Button>
-            <Button to="/login" variant="ghost" size="lg" className="text-white hover:bg-white/10">
+            <Button to="/login" variant="ghost" size="lg" className="text-white">
               Já tenho conta
             </Button>
           </div>
