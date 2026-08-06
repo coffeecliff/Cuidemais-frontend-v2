@@ -80,7 +80,7 @@ export function Home() {
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-light/15">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 pb-20 pt-16 md:grid-cols-2 md:items-center md:pb-28 md:pt-24">
+        <div className="mx-auto grid max-w-360 gap-12 px-[0.8px] pb-20 pt-16 md:grid-cols-2 md:items-center md:pb-28 md:pt-24">
           <div className="text-center md:text-left">
             <motion.span
               initial={{ opacity: 0, y: 12 }}
@@ -92,22 +92,13 @@ export function Home() {
               Plataforma de cuidado e acolhimento
             </motion.span>
 
-            <motion.img
-              src="/logo.svg"
-              alt=""
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
-              className="mx-auto mt-6 h-14 w-14 md:mx-0"
-            />
-
             <motion.h1
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mt-2 text-5xl font-extrabold tracking-tight text-dark sm:text-6xl"
             >
-              Cuide<span className="text-light">+</span>
+              <img src="/logo-text.svg" alt="Cuide+" className="h-40 w-auto" />
             </motion.h1>
 
             <motion.p
@@ -163,7 +154,7 @@ export function Home() {
       </section>
 
       {/* Como funciona */}
-      <section className="mx-auto max-w-6xl px-6 py-24">
+      <section className="mx-auto max-w-6xl px-[0.8px] py-24">
         <motion.div {...fadeUp} className="mb-14 text-center">
           <span className="text-sm font-semibold uppercase tracking-wide text-light">Como funciona</span>
           <h2 className="mt-2 text-3xl font-bold text-dark">Cuidado em três passos simples</h2>
@@ -186,7 +177,7 @@ export function Home() {
 
       {/* Para quem é */}
       <section className="bg-white py-24">
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-6xl px-[0.8px]">
           <motion.div {...fadeUp} className="mb-14 text-center">
             <span className="text-sm font-semibold uppercase tracking-wide text-light">Para quem é</span>
             <h2 className="mt-2 text-3xl font-bold text-dark">Feito para quem cuida de pessoas</h2>
@@ -209,7 +200,7 @@ export function Home() {
       </section>
 
       {/* Sobre */}
-      <section id="sobre" className="mx-auto max-w-6xl px-6 py-24">
+      <section id="sobre" className="mx-auto max-w-6xl px-[0.8px] py-24">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <motion.div {...fadeUp}>
             <span className="text-sm font-semibold uppercase tracking-wide text-light">Sobre nós</span>
@@ -263,7 +254,7 @@ export function Home() {
 
       {/* CTA final */}
       <section className="bg-dark py-20">
-        <div className="mx-auto max-w-3xl px-6 text-center">
+        <div className="mx-auto max-w-3xl px-[0.8px] text-center">
           <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-accent">
             <Sparkles size={22} />
           </div>
@@ -284,7 +275,7 @@ export function Home() {
       </section>
 
       <footer className="bg-white py-10">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-6 text-center">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-[0.8px] text-center">
           <img src="/logo-text.svg" alt="Cuide+" className="h-6 w-auto" />
           <p className="flex items-center gap-1.5 text-xs text-medium">
             <Clock size={13} />
