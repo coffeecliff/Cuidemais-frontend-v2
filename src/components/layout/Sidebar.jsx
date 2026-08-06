@@ -54,7 +54,7 @@ function NavItems({ items, onNavigate }) {
 function Brand() {
   return (
     <div className="flex items-center px-2">
-      <img src="/logo-text.svg" alt="Cuide+" className="h-8 w-auto" />
+      <img src="/logo-text.svg" alt="Cuide+" className="h-14 w-auto mb-6" />
     </div>
   );
 }

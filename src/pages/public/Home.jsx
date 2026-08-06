@@ -80,7 +80,7 @@ export function Home() {
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-b from-white to-[#efe8f2]">
-        <div className="mx-auto grid max-w-360 gap-12 px-[0.8px] pb-20 pt-16 md:grid-cols-2 md:items-center md:pb-28 md:pt-24">
+        <div className="mx-auto grid max-w-380 gap-26 px-10 pb-20 pt-16 md:grid-cols-2 md:items-center md:gap-12 md:pb-28 md:pt-24">
           <div className="text-center md:text-left">
             <motion.span
               initial={{ opacity: 0, y: 12 }}
@@ -98,7 +98,7 @@ export function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mt-2 text-5xl font-extrabold tracking-tight text-dark sm:text-6xl"
             >
-              <img src="/logo-text.svg" alt="Cuide+" className="h-40 w-auto" />
+              <img src="/logo-text.svg" alt="Cuide+" className="mx-auto h-40 w-auto md:mx-0" />
             </motion.h1>
 
             <motion.p
@@ -162,7 +162,7 @@ export function Home() {
       </section>
 
       {/* Como funciona */}
-      <section className="mx-auto max-w-6xl px-[0.8px] py-24">
+      <section className="mx-auto max-w-6xl px-10 py-24">
         <motion.div {...fadeUp} className="mb-14 text-center">
           <span className="text-sm font-semibold uppercase tracking-wide text-light">Como funciona</span>
           <h2 className="mt-2 text-3xl font-bold text-dark">Cuidado em três passos simples</h2>
@@ -171,8 +171,8 @@ export function Home() {
         <div className="grid gap-6 md:grid-cols-3">
           {STEPS.map((step, i) => (
             <motion.div key={step.title} {...fadeUp} transition={{ ...fadeUp.transition, delay: i * 0.1 }}>
-              <Card className="h-full">
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-light/15 text-light">
+              <Card className="h-full ">
+                <div className="mb-4 flex border-2 border-light h-11 w-11 items-center justify-center rounded-xl bg-light/15 text-light">
                   <step.icon size={22} />
                 </div>
                 <h3 className="text-base font-semibold text-dark">{step.title}</h3>
@@ -187,7 +187,7 @@ export function Home() {
 
       {/* Para quem é */}
       <section className="bg-white py-24">
-        <div className="mx-auto max-w-6xl px-[0.8px]">
+        <div className="mx-auto max-w-6xl px-10">
           <motion.div {...fadeUp} className="mb-14 text-center">
             <span className="text-sm font-semibold uppercase tracking-wide text-light">Para quem é</span>
             <h2 className="mt-2 text-3xl font-bold text-dark">Feito para quem cuida de pessoas</h2>
@@ -196,7 +196,7 @@ export function Home() {
           <div className="grid gap-6 md:grid-cols-3">
             {AUDIENCES.map((item, i) => (
               <motion.div key={item.title} {...fadeUp} transition={{ ...fadeUp.transition, delay: i * 0.1 }}>
-                <Card className="h-full border-dark/5 bg-background/60">
+                <Card className="h-full border-2 border-light bg-background/60">
                   <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-white text-medium">
                     <item.icon size={22} />
                   </div>
@@ -210,10 +210,10 @@ export function Home() {
       </section>
 
       {/* Sobre */}
-      <section id="sobre" className="mx-auto max-w-6xl px-[0.8px] py-24">
+      <section id="sobre" className="mx-auto max-w-6xl px-10 py-24">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <motion.div {...fadeUp}>
-            <span className="text-sm font-semibold uppercase tracking-wide text-light">Sobre nós</span>
+            <span className="text-[40px] font-semibold uppercase tracking-wide text-light">Sobre nós</span>
             <h2 className="mt-2 text-3xl font-bold text-dark">
               Conectando quem precisa de cuidado a quem quer cuidar
             </h2>
@@ -264,7 +264,7 @@ export function Home() {
 
       {/* CTA final */}
       <section className="bg-dark py-20">
-        <div className="mx-auto max-w-3xl px-[0.8px] text-center">
+        <div className="mx-auto max-w-3xl px-10 text-center">
           <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-accent">
             <Sparkles size={22} />
           </div>
@@ -285,7 +285,7 @@ export function Home() {
       </section>
 
       <footer className="bg-white py-10">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-[0.8px] text-center">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-10 text-center">
           <img src="/logo-text.svg" alt="Cuide+" className="h-6 w-auto" />
           <p className="flex items-center gap-1.5 text-xs text-medium">
             <Clock size={13} />

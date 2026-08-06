@@ -31,7 +31,7 @@ export function PublicNavbar() {
           <img src="/logo-text.svg" alt="Cuide+" className="h-14 w-auto" />
         </a>
 
-        <nav className="col-start-2 hidden items-center justify-self-center gap-8 md:flex">
+        <nav className="col-start-2 hidden items-center justify-self-center gap-8  md:flex">
           {LINKS.map((link) => {
             const isActive = link.to === '/' && location.pathname === '/' && !location.hash;
             return (
@@ -39,7 +39,7 @@ export function PublicNavbar() {
                 key={link.to}
                 href={link.to}
                 onClick={link.to === '/' ? goHome : undefined}
-                className={`text-sm font-bold transition-colors ${
+                className={`text-md font-bold transition-colors ${
                   isActive ? 'text-light' : 'text-dark hover:text-light'
                 }`}
               >
@@ -59,7 +59,7 @@ export function PublicNavbar() {
           type="button"
           onClick={() => setOpen(true)}
           aria-label="Abrir menu"
-          className="flex h-9 w-9 items-center justify-center justify-self-end rounded-lg text-dark hover:bg-dark/5 md:hidden"
+          className="col-start-3 flex h-9 w-9 items-center justify-center justify-self-end rounded-lg text-dark hover:bg-dark/5 md:hidden"
         >
           <Menu size={22} />
         </button>
